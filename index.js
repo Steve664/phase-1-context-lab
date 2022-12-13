@@ -21,12 +21,12 @@ const allWagesFor = function () {
     return payable
 }
 
-const createEmployeeRecord = (ele) => {
+const createEmployeeRecord = (element) => {
     return {
-        firstName: ele[0],
-        familyName: ele[1],
-        title: ele[2],
-        payPerHour: ele[3],
+        firstName: element[0],
+        familyName: element[1],
+        title: element[2],
+        payPerHour: element[3],
         timeInEvents: [],
         timeOutEvents: []
     }
@@ -68,8 +68,8 @@ const hoursWorkedOnDate = function (dateStamp) {
     const timeOutEvent = this.timeOutEvents.find((e) => {
         return e.date === dateStamp
     })
-    const oursWorked = (timeOutEvent.hour - timeInEvent.hour) / 100
-    return oursWorked
+    return (timeOutEvent.hour - timeInEvent.hour) / 100
+
 }
 
 const wagesEarnedOnDate = function (dateSought) {
